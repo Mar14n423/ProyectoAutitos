@@ -18,4 +18,8 @@ describe("Superficie", () => {
     const superficie = new Superficie(3, 3);
     expect(superficie.validarLaSuperficie()).toEqual(true);
   });
+  it("Debería verificar si la superficie no es válida (que las filas sean menores a 0)", () => {
+    const superficie = new Superficie(-5, 3);
+    expect(superficie.validarLaSuperficie()).toEqual(false);
+  });
 });
