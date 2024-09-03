@@ -7,6 +7,11 @@ class Superficie {
     mostrarSuperficie() {
         return [this.filas, this.columnas];
     }
-  }
+  
 
+  validarSuperficie()
+    {
+      return true;
+    }
+}
   export default Superficie;
