@@ -13,4 +13,4 @@ class Superficie {
   
   }
 
-  export default Superficie;
+export default Superficie;
