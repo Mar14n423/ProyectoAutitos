@@ -1,15 +1,12 @@
-import sumar from "./sumador";
+import mostrarLosComandos from "./LosComandos.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+const comando = document.querySelector("#comando");
+const form = document.querySelector("#comando-form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const resultado = comando.value
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p> Comando realizado: " + mostrarLosComandos(resultado) + "</p>";
 });
