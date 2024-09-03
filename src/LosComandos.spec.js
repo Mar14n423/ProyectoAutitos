@@ -10,8 +10,12 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
 });
 
 describe("Superficie", () => {
-  it("Deberia mostrar el area de la superfice", () => {
-    const result = new Superficie(3, 3)
-    expect(result.mostrarSuperficie()).toEqual([3, 3]);
+  it("Deberia mostrar las dimensiones especificas de la superfice", () => {
+    const superficie = new Superficie(3, 3)
+    expect(superficie.mostrarSuperficie()).toEqual([3, 3]);
+  });
+  it("Debería verificar si las filas son mayores a 0", () => {
+    const superficie = new Superficie(3, 3);
+    expect(superficie.validarLaSuperficie()).toEqual(true);
   });
 });
