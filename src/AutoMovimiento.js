@@ -82,6 +82,10 @@ class Autito {
         this.posY = Auto.posY;
         this.direccion = Auto.direccion;
     }
+    validarMovimiento(movimiento) 
+    {
+        return ["A", "I", "D"].includes(movimiento);
+    }
 
 }
 

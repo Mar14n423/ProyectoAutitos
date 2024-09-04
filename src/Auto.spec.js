@@ -130,5 +130,12 @@ describe("Verificar clase Autito", () => {
       Auto.GuardarEstado(nuevoEstado)
       expect(Auto.obtenerPosicion()).toEqual("4,5N");
   });
+  it("Debería validar movimientos correctamente", () => {
+    const auto = new Autito();
+    expect(auto.validarMovimiento("A")).toBe(true);
+    expect(auto.validarMovimiento("I")).toBe(true);
+    expect(auto.validarMovimiento("D")).toBe(true);
+    expect(auto.validarMovimiento("X")).toBe(false);
+  });
 
 });
