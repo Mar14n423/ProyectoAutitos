@@ -106,4 +106,9 @@ describe("Verificar clase Autito", () => {
         expect(Auto.AvanzarEnY()).toEqual(false);
       });
 
+      it("Si el auto avanza al este entonces deberia subir una posicion en x", () => {
+        const Auto = new Autito(3,2,"E");
+        expect(Auto.AvanzarEnY()).toEqual("4,2E");
+      });
+
 });
