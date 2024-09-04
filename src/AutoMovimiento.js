@@ -25,7 +25,10 @@ class Autito {
             this.posicionOeste();
         } else if (this.direccion === "O") {
             this.posicionNorte();
+        } else{
+            return false;
         }
+
     }
 
     girarIzquierda() {
