@@ -96,4 +96,9 @@ describe("Verificar clase Autito", () => {
         expect(Auto.girarIzquierda()).toEqual(false);
       });
 
+      it("Cuando el auto avanza al norte sube una posicion en y,", () => {
+        const Auto = new Autito(3,4,"N");
+        expect(Auto.AvanzarEnY()).toEqual("3,5N");
+      });
+
 });

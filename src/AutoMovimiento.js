@@ -47,7 +47,13 @@ class Autito {
             return false;
         }
     }
+
+    AvanzarEnY(){
+        return this.posX + "," + (this.posY + 1) + this.direccion;
+    }
 }
+
+
 
 
 export default Autito;
