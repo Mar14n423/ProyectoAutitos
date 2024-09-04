@@ -13,6 +13,14 @@ class Autito {
     posicionNorte(){
         this.direccion = "N";
     }
+    posicionSud(){
+        this.direccion = "S";
+    }
+    girarDerecha() {
+        if (this.direccion === "N") {
+            this.posicionEste();
+        }
+   }
     
 }
 
