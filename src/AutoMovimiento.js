@@ -10,8 +10,11 @@ class Autito {
     posicionOeste(){
         this.direccion = "O";
     }
-    posicionOeste(){
+    posicionNorte(){
         this.direccion = "N";
+    }
+    posicionSud(){
+        this.direccion = "S";
     }
 }
 
