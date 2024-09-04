@@ -98,27 +98,27 @@ describe("Verificar clase Autito", () => {
 
   it("Cuando el auto avanza al norte sube una posicion en y,", () => {
     const Auto = new Autito(3,4,"N");
-    expect(Auto.AvanzarEnY()).toEqual("3,5N");
+    expect(Auto.Avanzar()).toEqual("3,5N");
   });
 
   it("Si el auto NO avanza al norte entonces deberia dar falso", () => {
     const Auto = new Autito(1,2,"a");
-    expect(Auto.AvanzarEnY()).toEqual(false);
+    expect(Auto.Avanzar()).toEqual(false);
   });
 
   it("Si el auto avanza al este entonces deberia subir una posicion en x", () => {
     const Auto = new Autito(3,2,"E");
-    expect(Auto.AvanzarEnY()).toEqual("4,2E");
+    expect(Auto.Avanzar()).toEqual("4,2E");
   });
 
   it("Si el auto avanza al sur entonces deberia bajar una posicion en y", () => {
     const Auto = new Autito(1,4,"S");
-    expect(Auto.AvanzarEnY()).toEqual("1,3S");
+    expect(Auto.Avanzar()).toEqual("1,3S");
   });
 
   it("Si el auto avanza al oeste entonces deberia bajar una posicion en x", () => {
     const Auto = new Autito(4,2,"O");
-    expect(Auto.AvanzarEnY()).toEqual("3,2O");
+    expect(Auto.Avanzar()).toEqual("3,2O");
   });
 
 });

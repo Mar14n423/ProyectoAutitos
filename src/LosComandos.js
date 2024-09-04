@@ -7,4 +7,4 @@ function ComandosACargar(comando){
   const [dimensionesSuperficie, posicionInicial, comandosMovimiento] = comando.split('/');
   return [dimensionesSuperficie,posicionInicial,comandosMovimiento];
 }
-export default {muestraComando,ComandosACargar};
+export default {muestraComando,ComandosACargar, Autito};

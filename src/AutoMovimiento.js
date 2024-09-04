@@ -48,7 +48,7 @@ class Autito {
         }
     }
 
-    AvanzarEnY(){
+    Avanzar(){
 
         if(this.direccion === "N")
             {
