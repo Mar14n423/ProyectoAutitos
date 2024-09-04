@@ -91,4 +91,9 @@ describe("Verificar clase Autito", () => {
         expect(Auto.girarDerecha()).toEqual(false);
       });
 
+      it("El auto no gira a una coordenada correcta, deberia retornar falso ", () => {
+        const Auto = new Autito(1,2,"d");
+        expect(Auto.girarIzquierda()).toEqual(false);
+      });
+
 });

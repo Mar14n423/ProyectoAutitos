@@ -43,6 +43,8 @@ class Autito {
         }
         else if(this.direccion === "E"){
             this.direccion = "N";
+        } else{
+            return false;
         }
     }
 }
