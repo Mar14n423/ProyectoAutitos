@@ -16,6 +16,17 @@ class Autito {
     posicionSud(){
         this.direccion = "S";
     }
+
+    ApuntarOeste(){
+        this.direccion = "O";
+    }
+    GirarDerecha(){
+        if(this.direccion === "N"){
+            this.direccion = "E";
+        }
+    }
 }
+
+
 
 export default Autito;

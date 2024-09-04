@@ -9,24 +9,37 @@ describe("Verificar clase Autito", () => {
         expect(Auto.posY).toBe(0);
         expect(Auto.direccion).toBe("N");
     });
+
     it("El auto deberia apuntar hacia el Este", () => {
         const Auto = new Autito();
         Auto.posicionEste();
         expect(Auto.direccion).toEqual("E");
       });
+
     it("El auto deberia apuntar hacia el Oeste", () => {
         const Auto = new Autito();
         Auto.posicionOeste();
         expect(Auto.direccion).toEqual("O");
     });
+
     it("El auto deberia apuntar hacia el Norte", () => {
         const Auto = new Autito();
         Auto.posicionNorte();
         expect(Auto.direccion).toEqual("N");
     });
+
     it("El auto deberia apuntar hacia el Sud", () => {
         const Auto = new Autito();
         Auto.posicionSud();
         expect(Auto.direccion).toEqual("S");
     });
+
+    it("El autito apuntando al norte, si gira a la derecha, deberia apuntar al este", () => {
+        const Auto = new Autito();
+        Auto.posicionNorte();
+        Auto.GirarDerecha();
+        expect(Auto.direccion).toEqual("E");
+      });
+    
+  
 });
