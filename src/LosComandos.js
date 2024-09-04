@@ -16,4 +16,7 @@ function obtenerPosicionInicial(posicionInicial) {
   const direccion = posicionInicial.slice(-1);
   return { x, y, direccion };
 }
-export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial};
+function obtenerMovimientos(comandosMovimiento) {
+  return comandosMovimiento.split('');
+}
+export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos};

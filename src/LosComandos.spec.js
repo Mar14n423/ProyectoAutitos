@@ -19,6 +19,11 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.obtenerPosicionInicial("1,2N");
     expect(result).toEqual({ x: 1, y: 2, direccion: "N" });
   });
+  it("Debería desglosar los movimientos en una lista de acciones", () => {
+    const result = Comandos.ComandosACargar("5,5/1,2N/IAIAIAIAA");
+    const movimientos = Comandos.obtenerMovimientos(result[2]);
+    expect(movimientos).toEqual(["I", "A", "I", "A", "I", "A", "I", "A", "A"]);
+  });
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {
