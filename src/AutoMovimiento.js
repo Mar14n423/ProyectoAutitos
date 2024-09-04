@@ -7,6 +7,9 @@ class Autito {
     posicionEste(){
         this.direccion = "E";
     }
+    posicionOeste(){
+        this.direccion = "O";
+    }
 }
 
 export default Autito;
