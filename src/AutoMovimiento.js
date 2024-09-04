@@ -58,11 +58,16 @@ class Autito {
             } else if(this.direccion === "E"){
                 this.posX++;
                 return this.posX + "," + this.posY + this.direccion;
-                
+
             } else if(this.direccion === "S"){
                 this.posY--;
                 return this.posX + "," + this.posY + this.direccion;
+                
+            } else if(this.direccion === "O"){
+                this.posX--;
+                return this.posX + "," + this.posY + this.direccion;
             }
+
             else {
                 return false
             }
