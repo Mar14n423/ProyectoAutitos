@@ -4,5 +4,9 @@ class Autito {
         this.posY=posY;
         this.direccion = direccion;
     }
+    posicionEste(){
+        this.direccion = "E";
+    }
 }
+
 export default Autito;
