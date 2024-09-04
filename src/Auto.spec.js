@@ -126,4 +126,9 @@ describe("Verificar clase Autito", () => {
         expect(Auto.limitesPosInicial()).toEqual(false);
       });
 
+      it("Si el auto está en una posición menor a las coordenadas de y permitidas de la matriz, debería dar un error", () => {
+        const Auto = new Autito(1,-1, "S");
+        expect(Auto.limitesPosInicial()).toEqual(false);
+      }); 
+
 });

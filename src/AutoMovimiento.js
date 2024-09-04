@@ -74,7 +74,7 @@ class Autito {
     }
 
     limitesPosInicial(){
-        if(this.posX < 0){
+        if(this.posX < 0 || this.posY < 0 ){
             return false; 
         }
         return true;
