@@ -124,5 +124,11 @@ describe("Verificar clase Autito", () => {
     const Auto = new Autito(4,2,"O");
     expect(Auto.Avanzar()).toEqual("3,2O");
   });
+  it("Debería respaldar el estado del auto correctamente", () => {
+    const Auto = new Autito(2,2,"O");
+    const nuevoEstado = new Autito(4,5,"N");
+      Auto.GuardarEstado(nuevoEstado)
+      expect(Auto.obtenerPosicion()).toEqual("4,5N");
+  });
 
 });

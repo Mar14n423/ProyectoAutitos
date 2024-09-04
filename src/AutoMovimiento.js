@@ -76,6 +76,12 @@ class Autito {
                 return false
             }
     }
+    GuardarEstado(Auto)//del autito, para que se pueda restablecer su anterior estado, si es necesario
+    {
+        this.posX = Auto.posX;
+        this.posY = Auto.posY;
+        this.direccion = Auto.direccion;
+    }
 
 }
 
