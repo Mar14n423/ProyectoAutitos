@@ -21,7 +21,9 @@ class Autito {
             this.posicionEste();
         } else if (this.direccion === "E") {
             this.posicionSud();
-        } 
+        } else if (this.direccion === "S") {
+            this.posicionOeste();
+        }
     }
 }
 

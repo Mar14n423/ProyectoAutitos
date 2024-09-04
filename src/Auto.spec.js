@@ -45,5 +45,11 @@ describe("Verificar clase Autito", () => {
         Auto.girarDerecha();
         expect(Auto.direccion).toEqual("S");
     });
+
+    it("El autito apuntando al Sur, si gira a la derecha, debería apuntar al Oeste", () => {
+        const auto = new Autito(0, 0, "S");
+        auto.girarDerecha();
+        expect(auto.direccion).toEqual("O");
+    });
    
 });
