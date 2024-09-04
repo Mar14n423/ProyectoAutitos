@@ -27,6 +27,12 @@ class Autito {
             this.posicionNorte();
         }
     }
+
+    girarIzquierda() {
+        if(this.direccion === "N"){
+            this.direccion = "O";
+        }
+    }
 }
 
 
