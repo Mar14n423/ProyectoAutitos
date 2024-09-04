@@ -9,6 +9,10 @@ describe("Verificar clase Autito", () => {
     expect(Auto.posY).toBe(0);
     expect(Auto.direccion).toBe("N");
   });
+  it("Debería obtener la posición actual del auto", () => {
+    const Auto = new Autito(1,2, "N");
+    expect(Auto.obtenerPosicion()).toBe("1,2N");
+  });
 
   it("El auto deberia apuntar hacia el Este", () => {
     const Auto = new Autito();

@@ -1,8 +1,12 @@
 class Autito {
     constructor(posX, posY, direccion){
-        this.posX=posX || 0; 
+        this.posX=posX; 
         this.posY=posY;
         this.direccion = direccion;
+    }
+    obtenerPosicion() 
+    {
+        return `${this.posX},${this.posY}${this.direccion}`;
     }
     posicionEste(){
         this.direccion = "E";
