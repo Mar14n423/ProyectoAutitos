@@ -5,12 +5,12 @@ class Superficie {
     }
 
     mostrarSuperficie() {
-      return [this.filas, this.columnas];
+        return [this.filas, this.columnas];
     }
     validarLaSuperficie(){
       return this.filas > 0;
     }
   
-  }
+}
 
-export default Superficie;
+  export default Superficie;

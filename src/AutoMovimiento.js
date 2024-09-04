@@ -19,11 +19,11 @@ class Autito {
     girarDerecha() {
         if (this.direccion === "N") {
             this.posicionEste();
-        }
-   }
-    
+        } else if (this.direccion === "E") {
+            this.posicionSud();
+        } 
+    }
 }
-
 
 
 export default Autito;

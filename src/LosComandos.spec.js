@@ -8,6 +8,8 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     expect(result).toEqual("5,5/1,2N/IAIAIAIAA");
   });
 });
+
+
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {
   it("Deberia mostrar las dimensiones especificas de la superfice", () => {
