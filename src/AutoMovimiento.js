@@ -49,7 +49,15 @@ class Autito {
     }
 
     AvanzarEnY(){
-        return this.posX + "," + (this.posY + 1) + this.direccion;
+        
+        if(this.direccion === "N")
+            {
+                this.posY++;
+                return this.posX + "," + this.posY + this.direccion;
+            }
+            else {
+                return false
+            }
     }
 }
 
