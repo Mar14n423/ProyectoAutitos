@@ -7,4 +7,8 @@ function ComandosACargar(comando){
   const [dimensionesSuperficie, posicionInicial, comandosMovimiento] = comando.split('/');
   return [dimensionesSuperficie,posicionInicial,comandosMovimiento];
 }
-export default {muestraComando,ComandosACargar, Autito};
+function obtenerDimensiones(dimensionesSuperficie) {
+  const [filas, columnas] = dimensionesSuperficie.split(',').map(Number);
+  return { filas, columnas };
+}
+export default {muestraComando,ComandosACargar, obtenerDimensiones};
