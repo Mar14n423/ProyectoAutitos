@@ -13,9 +13,7 @@ class Autito {
     posicionNorte(){
         this.direccion = "N";
     }
-    posicionSud(){
-        this.direccion = "S";
-    }
+    
 }
 
 export default Autito;

@@ -24,9 +24,5 @@ describe("Verificar clase Autito", () => {
         Auto.posicionNorte();
         expect(Auto.direccion).toEqual("N");
     });
-    it("El auto deberia apuntar hacia el Sud", () => {
-        const Auto = new Autito();
-        Auto.posicionSud();
-        expect(Auto.direccion).toEqual("S");
-    });
+   
 });
