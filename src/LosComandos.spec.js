@@ -15,6 +15,10 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.obtenerDimensiones("5,7");
     expect(result).toEqual({ filas: 5, columnas: 7 });
   });
+  it("Debería desglosar la posición inicial en coordenadas y dirección", () => {
+    const result = Comandos.obtenerPosicionInicial("1,2N");
+    expect(result).toEqual({ x: 1, y: 2, direccion: "N" });
+  });
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {
