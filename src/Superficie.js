@@ -8,7 +8,7 @@ class Superficie {
         return [this.filas, this.columnas];
     }
     validarLaSuperficie(){
-      return this.filas > 0;
+      return this.filas > 0 && this.columnas > 0;
     }
   
 }

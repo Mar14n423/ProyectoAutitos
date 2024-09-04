@@ -1,7 +1,10 @@
-function mostrarLosComandos(comando) {
+import Autito from "./AutoMovimiento.js"
+
+function muestraComando(comando) {
   return comando;
 }
-
-
-
-export default mostrarLosComandos;
+function ComandosACargar(comando){
+  const [dimensionesSuperficie, posicionInicial, comandosMovimiento] = comando.split('/');
+  return [dimensionesSuperficie,posicionInicial,comandosMovimiento];
+}
+export default {muestraComando,ComandosACargar};
