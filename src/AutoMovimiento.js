@@ -1,6 +1,6 @@
 class Autito {
     constructor(posX, posY, direccion){
-        this.posX=posX;
+        this.posX=posX || 0; 
         this.posY=posY;
         this.direccion = direccion;
     }
@@ -62,7 +62,7 @@ class Autito {
             } else if(this.direccion === "S"){
                 this.posY--;
                 return this.posX + "," + this.posY + this.direccion;
-                
+
             } else if(this.direccion === "O"){
                 this.posX--;
                 return this.posX + "," + this.posY + this.direccion;
@@ -71,6 +71,13 @@ class Autito {
             else {
                 return false
             }
+    }
+
+    limitesPosInicial(){
+        if(this.posX < 0){
+            return false; 
+        }
+        return true;
     }
 }
 
