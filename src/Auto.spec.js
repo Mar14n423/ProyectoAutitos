@@ -159,5 +159,11 @@ describe("Verificar AvanzarOGirar(Izquierda o Derecha)", () => {
     auto.MovimientosGA("I");
     expect(auto.girarIzquierda).toHaveBeenCalled(); 
   });
+  it("Debería manejar movimientos inválidos correctamente", () => {
+    const auto = new Autito();
+    const consoleSpy = jest.spyOn(console, 'log');
+    auto.MovimientosGA("X"); // Movimiento inválido
+    expect(consoleSpy).toHaveBeenCalledWith("Movimiento inválido");
+  });
 
 });

@@ -98,6 +98,8 @@ class Autito {
         case "I":
             this.girarIzquierda();
             break;
+        default:
+            console.log("Movimiento inválido");
         
         }
         
