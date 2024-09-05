@@ -1,13 +1,32 @@
-import {comandosACargar,procesarInstrucciones} from "./LosComandos.js";
+import Comandos from "./LosComandos.js";
 
-const comando = document.querySelector("#comando");
+const comandoInput = document.querySelector("#comando");
 const form = document.querySelector("#comando-form");
-const div = document.querySelector("#resultado-div");
+const divResultado = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault();
+  event.preventDefault(); // Evitar el comportamiento por defecto del form
 
-  const resultado = comando.value
-  const posInicial = comandosACargar(resultado);
-  div.innerHTML = "<p> Posicion inicial: "+ posInicial[1]+  "<br> Comando realizado: " + posInicial[2] + "</br> Posicion final: " + procesarInstrucciones(resultado) +"</p>";
+  const comando = comandoInput.value; // Obtener el comando ingresado
+  if (!comando) {
+    divResultado.innerHTML = "<p>Por favor, ingresa un comando válido.</p>";
+    return;
+  }
+
+  try {
+    // Procesar el comando con tu lógica
+    const posInicial = Comandos.ComandosACargar(comando);
+    const resultadoFinal = Comandos.procesarInstruccion(comando);
+
+    // Mostrar los resultados
+    divResultado.innerHTML = `
+      <p>Posición inicial: ${posInicial[1]}</p>
+      <p>Comando realizado: ${comando}</p>
+      <p>Posición final: ${resultadoFinal}</p>
+    `;
+  } catch (error) {
+    // Manejar errores y mostrarlos
+    console.error(error);
+    divResultado.innerHTML = "<p>Ocurrió un error al procesar el comando.</p>";
+  }
 });

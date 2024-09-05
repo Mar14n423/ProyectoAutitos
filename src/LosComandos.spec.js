@@ -36,6 +36,10 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.procesarInstruccion("-5,5/1,2N/IAIA");
     expect(result).toEqual("Superficie invalida");
   });
+  it("Debería restaurar la última posición del autito cuando llegó al límite (posición fuera de superficie)", () => {
+    const result = Comandos.procesarInstruccion("5,5/3,3N/AAAA");
+    expect(result).toEqual("3,5N");
+  });  
 
   it("Debería devolver un error si se introduce un movimiento no válido", () => {
     const result = Comandos.procesarInstruccion("5,5/3,3N/XYZ");

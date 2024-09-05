@@ -25,6 +25,7 @@ function procesarInstruccion(comando) {
   const dimension = obtenerDimensiones(b[0]);
   const posicionInicial = obtenerPosicionInicial(b[1]);
   const movimientos = obtenerMovimientos(b[2]);
+  
 
   const superficie = new Superficie(dimension.filas, dimension.columnas);
   let Auto = new Autito(posicionInicial.x, posicionInicial.y, posicionInicial.direccion);
@@ -50,4 +51,5 @@ function procesarInstruccion(comando) {
 
   return Auto.obtenerPosicion();
 }
+
 export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos,procesarInstruccion};
