@@ -153,5 +153,11 @@ describe("Verificar AvanzarOGirar(Izquierda o Derecha)", () => {
     auto.MovimientosGA("D");
     expect(auto.girarDerecha).toHaveBeenCalled(); 
   });
+  it("Debería girar a la izquierda cuando se le pasa el comando 'I'", () => {
+    const auto = new Autito();
+    jest.spyOn(auto, 'girarIzquierda');
+    auto.MovimientosGA("I");
+    expect(auto.girarIzquierda).toHaveBeenCalled(); 
+  });
 
 });

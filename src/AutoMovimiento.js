@@ -95,6 +95,9 @@ class Autito {
         case "D":
             this.girarDerecha();
             break;
+        case "I":
+            this.girarIzquierda();
+            break;
         
         }
         
