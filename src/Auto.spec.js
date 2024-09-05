@@ -138,4 +138,14 @@ describe("Verificar clase Autito", () => {
     expect(auto.validarMovimiento("X")).toBe(false);
   });
 
+
+});
+describe("Verificar AvanzarOGirar(Izquierda o Derecha)", () => {
+  it("Debería avanzar cuando se le pasa el comando 'A'", () => {
+      const Auto = new Autito();
+      jest.spyOn(Auto, 'Avanzar'); 
+      Auto.MovimientosGA("A");
+      expect(Auto.Avanzar).toHaveBeenCalled(); 
+  });
+
 });

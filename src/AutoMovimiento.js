@@ -86,6 +86,15 @@ class Autito {
     {
         return ["A", "I", "D"].includes(movimiento);
     }
+    MovimientosGA(movimiento) {
+        switch (movimiento) 
+        {
+        case "A":
+            this.Avanzar();
+            break;
+        }
+    }
+    
 
 }
 
