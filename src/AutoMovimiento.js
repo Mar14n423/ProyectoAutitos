@@ -92,7 +92,12 @@ class Autito {
         case "A":
             this.Avanzar();
             break;
+        case "D":
+            this.girarDerecha();
+            break;
+        
         }
+        
     }
     
 
