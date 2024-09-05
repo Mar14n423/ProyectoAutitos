@@ -28,7 +28,10 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.procesarInstruccion("5,5/3,3N/IADA")
     expect(result).toEqual("2,4N");
   });
-  
+  it("Debería devolver la posicion final cuando el auto se mueve dentro de los límites", () => {
+    const result = Comandos.procesarInstruccion("5,5/3,2N/AA");
+    expect(result).toEqual("3,4N");
+  });
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {
