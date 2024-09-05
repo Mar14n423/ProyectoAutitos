@@ -24,7 +24,10 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const movimientos = Comandos.obtenerMovimientos(result[2]);
     expect(movimientos).toEqual(["I", "A", "I", "A", "I", "A", "I", "A", "A"]);
   });
-  
+  it("Debería procesar el comando ingresado y devolver la posicion final del autito", () => {
+    const result = Comandos.procesarInstruccion("5,5/3,3N/IADA")
+    expect(result).toEqual("2,4N");
+  });
   
 });
 //Aqui las pruebas de la Superficie

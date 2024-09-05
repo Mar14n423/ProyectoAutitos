@@ -20,5 +20,21 @@ function obtenerPosicionInicial(posicionInicial) {
 function obtenerMovimientos(comandosMovimiento) {
   return comandosMovimiento.split('');
 }
+function procesarInstruccion(comando) {
+  const b = ComandosACargar(comando);
+  const dimension = obtenerDimensiones(b[0]);
+  const posicionInicial = obtenerPosicionInicial(b[1]);
+  const movimientos = obtenerMovimientos(b[2]);
 
-export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos,};
+  const superficie = new Superficie(dimension.filas, dimension.columnas);
+  let Auto = new Autito(posicionInicial.x, posicionInicial.y, posicionInicial.direccion);
+
+  for (const movimiento of movimientos) {
+    if (Auto.validarMovimiento(movimiento)) {
+      Auto.MovimientosGA(movimiento);
+    }
+  }
+
+  return Auto.obtenerPosicion();
+}
+export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos,procesarInstruccion};
