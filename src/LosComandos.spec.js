@@ -32,6 +32,10 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.procesarInstruccion("5,5/3,2N/AA");
     expect(result).toEqual("3,4N");
   });
+  it("Debería devolver 'Superficie invalida' cuando las dimensiones de la superficie son inválidas", () => {
+    const result = Comandos.procesarInstruccion("-5,5/1,2N/IAIA");
+    expect(result).toEqual("Superficie invalida");
+  });
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {

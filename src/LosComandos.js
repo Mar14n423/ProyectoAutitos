@@ -28,7 +28,9 @@ function procesarInstruccion(comando) {
 
   const superficie = new Superficie(dimension.filas, dimension.columnas);
   let Auto = new Autito(posicionInicial.x, posicionInicial.y, posicionInicial.direccion);
-
+  if (!superficie.validarLaSuperficie()) {
+    return "Superficie invalida";
+  }
   for (const movimiento of movimientos) {
     if (Auto.validarMovimiento(movimiento)) {
       Auto.MovimientosGA(movimiento);
