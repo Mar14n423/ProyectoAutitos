@@ -1,6 +1,6 @@
 import Comandos from "./LosComandos.js";
 import Superficie from "./Superficie.js";
-
+import Autito from "./AutoMovimiento.js"
 
 describe("Comandos del auto para que se defina el grid y se inicialice el auto", () => {
   it("Se deberia mostrar el comando ingresado por el usuario", () => {
@@ -24,10 +24,12 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const movimientos = Comandos.obtenerMovimientos(result[2]);
     expect(movimientos).toEqual(["I", "A", "I", "A", "I", "A", "I", "A", "A"]);
   });
+  
+  
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {
-  it("Deberia mostrar las dimensiones especificas de la superfice", () => {
+  it("Deberia mostrar las dimensiones especificas de la superficie", () => {
     const superficie = new Superficie(3, 3)
     expect(superficie.mostrarSuperficie()).toEqual([3, 3]);
   });
@@ -40,7 +42,14 @@ describe("Superficie", () => {
     expect(superficie.validarLaSuperficie()).toEqual(false);
   });
   it("Debería verificar si la superficie no es válida (que las columnas sean menores a 0)", () => {
-    const superficie = new Superficie(3, 0);
+    const superficie = new Superficie(3, -1);
     expect(superficie.validarLaSuperficie()).toEqual(false);
   });
+  it("Debería verificar si la posición del autito está dentro de los límites de la superficie", () => {
+    const superficie = new Superficie(5, 5);
+    expect(superficie.validarPosicion(3, 3)).toEqual(true);  // Dentro de los límites
+    expect(superficie.validarPosicion(6, 3)).toEqual(false); // Fuera de los límites (x fuera)
+    expect(superficie.validarPosicion(3, 6)).toEqual(false); // Fuera de los límites (y fuera)
+  });
+  
 });

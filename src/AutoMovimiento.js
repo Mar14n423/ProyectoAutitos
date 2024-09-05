@@ -6,7 +6,7 @@ class Autito {
     }
     obtenerPosicion() 
     {
-        return `${this.posX},${this.posY}${this.direccion}`;
+        return this.posX +","+ this.posY + this.direccion;
     }
     posicionEste(){
         this.direccion = "E";
@@ -52,29 +52,28 @@ class Autito {
         }
     }
 
-    Avanzar(){
-
+    Avanzar()
+    {
         if(this.direccion === "N")
             {
                 this.posY++;
-                return this.posX + "," + this.posY + this.direccion;
-
-            } else if(this.direccion === "E"){
+            }
+        else if(this.direccion === "E"){
                 this.posX++;
-                return this.posX + "," + this.posY + this.direccion;
-
-            } else if(this.direccion === "S"){
+            }
+        else if(this.direccion === "S"){
                 this.posY--;
-                return this.posX + "," + this.posY + this.direccion;
-
-            } else if(this.direccion === "O"){
+            }
+        else if(this.direccion === "O")
+            {
                 this.posX--;
-                return this.posX + "," + this.posY + this.direccion;
             }
-
-            else {
-                return false
-            }
+        else 
+        {
+            return false;
+        }
+        let resultado = this.posX + "," + this.posY + this.direccion;
+        return resultado;
     }
     GuardarEstado(Auto)//del autito, para que se pueda restablecer su anterior estado, si es necesario
     {

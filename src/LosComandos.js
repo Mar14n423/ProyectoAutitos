@@ -1,4 +1,5 @@
 import Autito from "./AutoMovimiento.js"
+import Superficie from "./Superficie.js";
 
 function muestraComando(comando) {
   return comando;
@@ -19,4 +20,5 @@ function obtenerPosicionInicial(posicionInicial) {
 function obtenerMovimientos(comandosMovimiento) {
   return comandosMovimiento.split('');
 }
-export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos};
+
+export default {muestraComando,ComandosACargar, obtenerDimensiones,obtenerPosicionInicial,obtenerMovimientos,};

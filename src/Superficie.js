@@ -7,10 +7,14 @@ class Superficie {
     mostrarSuperficie() {
         return [this.filas, this.columnas];
     }
-    validarLaSuperficie(){
+    validarLaSuperficie()
+    {
       return this.filas > 0 && this.columnas > 0;
     }
+    validarPosicion(x, y) {
+      return x >= 0 && x < this.filas && y >= 0 && y < this.columnas;
+  }
   
 }
 
-  export default Superficie;
+export default Superficie;

@@ -1,4 +1,4 @@
-import comandosACargar from "./LosComandos.js";
+import {comandosACargar,procesarInstrucciones} from "./LosComandos.js";
 
 const comando = document.querySelector("#comando");
 const form = document.querySelector("#comando-form");
@@ -9,5 +9,5 @@ form.addEventListener("submit", (event) => {
 
   const resultado = comando.value
   const posInicial = comandosACargar(resultado);
-  div.innerHTML = "<p> Posicion inicial: "+ posInicial[1]+  "<br> Comando realizado: " + posInicial[2] + "</br> Posicion final: " + ejecutar(resultado) +"</p>";
+  div.innerHTML = "<p> Posicion inicial: "+ posInicial[1]+  "<br> Comando realizado: " + posInicial[2] + "</br> Posicion final: " + procesarInstrucciones(resultado) +"</p>";
 });
