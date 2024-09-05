@@ -36,6 +36,17 @@ describe("Comandos del auto para que se defina el grid y se inicialice el auto",
     const result = Comandos.procesarInstruccion("-5,5/1,2N/IAIA");
     expect(result).toEqual("Superficie invalida");
   });
+
+  it("Debería devolver un error si se introduce un movimiento no válido", () => {
+    const result = Comandos.procesarInstruccion("5,5/3,3N/XYZ");
+    expect(result).toEqual("X no es un movimiento válido");
+  });
+
+  it("Debería moverse correctamente en todas las direcciones y devolver la posición final", () => {
+    const result = Comandos.procesarInstruccion("5,5/1,2E/AADAIA");
+    expect(result).toEqual("4,1E");
+  });
+
 });
 //Aqui las pruebas de la Superficie
 describe("Superficie", () => {

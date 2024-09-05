@@ -13,7 +13,7 @@ class Superficie {
     }
     validarPosicion(x, y) {
       return x >= 0 && x < this.filas && y >= 0 && y < this.columnas;
-  }
+    }    
   
 }
 

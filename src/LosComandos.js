@@ -28,12 +28,23 @@ function procesarInstruccion(comando) {
 
   const superficie = new Superficie(dimension.filas, dimension.columnas);
   let Auto = new Autito(posicionInicial.x, posicionInicial.y, posicionInicial.direccion);
+
   if (!superficie.validarLaSuperficie()) {
     return "Superficie invalida";
   }
+
   for (const movimiento of movimientos) {
+    const autitoRespaldo = new Autito(Auto.posX, Auto.posY, Auto.direccion);
+    
     if (Auto.validarMovimiento(movimiento)) {
       Auto.MovimientosGA(movimiento);
+ 
+      if (!superficie.validarPosicion(Auto.posX, Auto.posY)) {
+        Auto = autitoRespaldo;
+        console.log(`El autito intentó salir de los límites. Restaurando a la posición ${Auto.obtenerPosicion()}`);
+      }
+    } else {
+      return `${movimiento} no es un movimiento válido`;
     }
   }
 
